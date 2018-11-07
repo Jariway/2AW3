@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="CSS/azterketa.css" rel="stylesheet" type="text/css"/>
+        <script src="js/leerNoticias.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <header>
+            <h1>TABLON NOTICIAS </h1>
+            <ul>
+                <li><input onclick="showLogin()" type="button"  value="LOGIN"></li>
+                <li><H4 id="miPerfil"></H4></li>
+            </ul>
+        </header>
+        
+<!--   FORMULARIO LOGIN               -->      
+        <div id="miLogin">
+            <H2>INTRODUCE TUS DATOS</H2>
+            <form id="formuLogin" align="center">
+                <label>USUARIO </label> <input id="idUsuario" type="text"  >
+<label>CONTRASEÑA </label> <input id="idContrasena" onkeypress="return numbersonly(this, event)" type="text">
+                <input onclick="checkLogin()" type="button"  value="enviar" >
+            </form> 
+        </div>
+ <!--   NOTICIAS               -->       
+        <div class="elementos" id="elementos">
+               
+            <div  class="texto">
+            <h3>NOTICIA DE ULTIMA HORA</h3>
+             <p> Maecenas vitae eros nisi. Maecenas ipsum erat, auctor sed libero vitae, pulvinar porttitor leo. Aenean mattis sem sit amet tortor tincidunt cursus. Vivamus egestas cursus ipsum, sed tristique magna fermentum in. Pellentesque ac pretium ex. Phasellus convallis ante urna, sed laoreet lacus imperdiet a. Nulla ac nibh faucibus, tincidunt turpis vel, pretium elit.</p>       
+            </div>
+           
+            <div class="texto">
+            <h3>NOTICIAS INTERNACIONALES</h3>
+             <p> Maecenas vitae eros nisi. Maecenas ipsum erat, auctor sed libero vitae, pulvinar porttitor leo. Aenean mattis sem sit amet tortor tincidunt cursus. Vivamus egestas cursus ipsum, sed tristique magna fermentum in. Pellentesque ac pretium ex. Phasellus convallis ante urna, sed laoreet lacus imperdiet a. Nulla ac nibh faucibus, tincidunt turpis vel, pretium elit.</p>       
+             </div>
+         </div>      
+ <!--  CREAR NOTICIAS               -->            
+         <div id="crearNoticia">
+            
+            <form id="formuCrearNoticia">
+                <label>TITULO NOTICIA </label> <input type="text" id="idNoticiaNuevaTitulo"   /><br>
+                <label>TEXTO NOTICIA </label><textarea id="idNoticiaNuevaTexto"  rows="4" cols="50"></textarea>
+                <input type="button" onclick="anadirNoticia()" value="enviar" >
+            </form> 
+                 
+        </div> 
+            
+              
+    </body>
+</html>

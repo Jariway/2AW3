@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+    </head>
+    <body>
+        <h1 id="titulo">ELEMENTO DESBERDINEN PROPIETATEAK LORTU</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse laoreet mi nibh, a placerat eros rutrum eu. Cras porta fermentum consequat. Donec placerat erat enim, et pulvinar justo congue quis. Curabitur dictum sollicitudin sollicitudin. </p>
+        <p>Duis tincidunt, eros in interdum ultricies, quam dui fringilla dam, sed cursus massa ipsum eget leo. Integer viverra tempus auctor. Phasellus ullamcorper dictum nulla.</p>
+        <p>Curabitur vehicula arcu sed pulvinar aliquam. Integer eu diam id lorem aliquam feugiat. Aliquam quis tincidunt erat, eget tempus eros. Fusce luctus ultrices tellus at commodo.</p>
+        <p>Nam pulvinar leo et justo scelerisque interdum.</p>
+        <img id="foto" src="imagenes/celtics.jpg" width="167" height="118">
+
+
+        <p>  
+            <input onclick="cambiarImagen('1')" id="bulls" type="radio" name="radio"/>  	<label for="uno">BULLS</label>
+            <input onclick="cambiarImagen('2')" id="celtics" type="radio" name="radio"/>  <label for="dos">CELTICS</label>
+            <input onclick="cambiarImagen('3')" id="nba" type="radio" name="radio"/>  	<label for="tres">NBA</label>
+        </p>
+        <button onclick="cambiarIdioma('1')">Cambiar Euskera</button>
+        <button onclick="cambiarIdioma('2')">Cambiar Castellano</button>
+
+        <p></p>
+
+        NOMBRE
+        <input type="text" name="Izena" id="Izena">
+        NICK
+        <input type="text" name="Nick" id="Nick">
+        CONTRASEÑA
+        <input type="text" name="Pasahitza" id="Pasahitza">
+        <button onclick="saludar()">SALUDAR</button>
+
+        <div id="SaludoAqui"></div>
+        <script src="js/script.js"></script>
+    </body>
+</html>

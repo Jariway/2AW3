@@ -1,0 +1,64 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!doctype html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>bideo orria</title>
+        <link href="CSS/style.css" rel="stylesheet" type="text/css"/>
+        <script src="JS/KalkuloFuntzioak.js" type="text/javascript"></script>
+    </head>
+
+    <body>
+        <header>GASTUEN KONTROL ORRIA</header>    
+        <div class="container1" id="main">
+            <div class="elementos">
+                <fieldset><legend>DIETAK</legend>
+                    <input onclick="calcularTotal()" name="dietak" type="checkbox">                       
+                    <label  for="gosaria">Gosaria</label>
+                    <br>
+                    <input onclick="calcularTotal()" name="dietak" type="checkbox">                      
+                    <label for="bazkaria">Bazkaria</label>
+                    <br> 
+                    <input onclick="calcularTotal()" name="dietak" type="checkbox">                        
+                    <label for="afaria">Afaria</label>
+                    <hr>
+                    <label class="bidaia" for="totalDietak">Total dietak</label>  <label id="totalDietak" name="totalDietak" type="text" class="emaitza">0 </label>
+                </fieldset>
+            </div>   
+
+            <div class="elementos">
+                <fieldset><legend>BIDAIAK</legend>
+                    <label class="bidaia" for="km">KM</label>                     
+                    <input name="km" onkeyup="calcularTotal()" onkeypress="return soloNumeros(this, event)" type="text"   id="km" class="Kutxa"> 
+                    <img id="imagenKMerror" src="img/depositphotos_40537445-stock-photo-error-icon.jpg" width="20px" height="20px" />
+                    <br>  
+                    <label class="bidaia" for="orduakBidaia">ORDUAK</label>       
+                    <input onkeypress="return soloNumeros(this, event)" onkeyup="calcularTotal()" name="orduakBidaia" type="text"  class="Kutxa" id="orduakBidaiak">
+                    <img id="imagenORDUAKerror" src="img/depositphotos_40537445-stock-photo-error-icon.jpg" width="20px" height="20px" />
+                    <hr>
+                    <label class="bidaia" for="totalBidaiak">Total Bidaiak</label> <label id="totalBidaiak" name="totalBidaiak" type="text" class="emaitza"> 0 </label>
+                </fieldset>
+
+            </div>   
+
+            
+        </div>   
+
+        <footer class="totalesparciales">
+
+            <label id="ltotal" class="bidaia" for="total">TOTAL</label>            <label id="total" name="total" type="text" class="emaitza">0</label> 
+            <BR>
+            <input id="btngarbitu" name="btngarbitu" type="button" value="GARBITU" onclick="limpiarTodo()"> <br>
+            <input id="btnHanditu" name="btnHanditu" type="button" value="+" onclick="cambiarTamanos(0)">
+            <input id="btnTxikitu" name="btnTxikitu" type="button" value="-" onclick="cambiarTamanos(1)">
+        </footer>
+
+
+
+
+
+    </body>
+</html>
