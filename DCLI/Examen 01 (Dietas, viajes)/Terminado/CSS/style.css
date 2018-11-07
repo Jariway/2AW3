@@ -1,0 +1,132 @@
+/* Too narrow to support three columns */
+  @media all and (max-width: 640px) {
+  
+   #main, #page {
+    -webkit-flex-flow: column;
+            flex-flow: column;
+   }
+
+   #main > article {
+    /* Return them to document order */
+    -webkit-order: 0;
+            order: 0;
+   }
+  
+    header, footer {
+    min-height: 30px;
+    max-height: 50px;
+   }
+  }
+
+ body {
+   font: 24px Helvetica;
+   background-color: lightseagreen;
+  }
+
+  #main {
+   min-height: 450px;
+   /*min-width: 400px;*/
+   margin: 0px;
+   padding: 0px;
+   display: -webkit-flex;
+   display:         flex;
+   -webkit-flex-flow: row;
+           flex-flow: row;
+   }
+/*.container1{
+    width: 100%;
+    padding: 30px;
+    height:100%;
+}*/
+    .elementos{
+  /*  margin-top:30px;*/
+    flex:0 0 48%;
+    margin-left:1%;
+    min-height:400px;
+    min-width:350px;    
+    border-radius: 10px;
+}
+
+#main > article {
+   margin: 4px;
+   /*padding: 5px;*/
+   /*border: 1px solid #cccc33;*/
+   border-radius: 7pt;
+   /*background: #dddd88;*/
+   -webkit-flex: 3 1 30%;
+           flex: 3 1 30%;
+/*   -webkit-order: 2;
+           order: 2;*/
+           min-height:400px;
+    min-width:350px;    
+   }
+
+fieldset{
+     border:1px solid white;
+     color: white;
+     padding: 10%;
+     font-size: 1em ;
+     background-color: lightslategray;
+     height:300px;
+     
+}
+input[type="checkbox"]{
+    margin:20px;
+    /* Doble-tamaño Checkboxes */
+  -ms-transform: scale(2); /* IE */
+  -moz-transform: scale(2); /* FF */
+  -webkit-transform: scale(2); /* Safari y Chrome */
+  -o-transform: scale(2); /* Opera */
+  padding: 10px;
+}
+label{
+    margin-left: 10px;
+    font-size: 1em ;
+}
+.bidaia{
+    width:120px;
+    display:inline-block;
+    color: white;
+    margin-top: 20px;
+   
+}
+input[type="text"]
+{
+  width:60px;  
+height: 20px;
+}
+hr{
+  bottom:100px;}
+
+.totalesparciales{
+    margin-top:30px;
+    width:90%;
+    margin:auto;
+    background-color: lightslategray;
+    border:1px solid white;
+   
+}
+#totalDietak,#totalBidaiak {margin-right: 25%;}
+#hrlanak{margin-top:90px;}
+#ltotalLanak{margin-top: 30px}
+#imagenKMerror {display:none;}
+#imagenORDUAKerror {display:none;}
+header, footer {
+   display: block;
+   margin: 4px;
+   padding: 5px;
+   min-height: 50px;
+   border: 1px solid #eebb55;
+   border-radius: 7pt;
+   background: lightslategray;
+   text-align: center;
+   font-size: 25px;
+   color: white;
+   }
+    
+   .emaitza{
+        border: 1px solid white;
+         padding: 10px;
+         width:100px;
+   }
+
