@@ -6,7 +6,6 @@
 }
 
 ul {
-    position: relative;
     list-style: none;
 }
 
@@ -16,6 +15,7 @@ li {
 }
 
 .enlace {
+    position: absolute;
     color: purple;
     text-decoration: none;
     z-index: 100;
