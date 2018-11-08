@@ -1,0 +1,39 @@
+.menu {
+    width: 200px;
+    background-color: lightgrey;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+ul {
+    position: relative;
+    list-style: none;
+}
+
+li {
+    width: 250px;
+    height: 50px;
+}
+
+.enlace {
+    color: purple;
+    text-decoration: none;
+    z-index: 100;
+}
+
+.content {
+    position: fixed;
+    opacity: 0;
+    width: 250px;
+    z-index: 50;
+    left: 0px;
+    transition: all 3s;
+}
+
+.enlace:hover+.content {
+    background-color: black;
+    opacity: 100;
+    color: white;
+    padding: 10px;
+    left: 400px;
+}
