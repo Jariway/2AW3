@@ -91,8 +91,8 @@ input {
 }
 
 input {
-    display: block;
-    margin: 0 auto;
+    display: inline;
+    /* margin: 0 auto; */
 }
 
 #nombre:empty {
@@ -109,8 +109,12 @@ span {
     display: none;
 }
 
+.emailtr {
+    width: 1000px;
+}
+
 #email:focus+span {
-    display: block;
+    display: inline-block;
     background-color: red;
     color: white;
 }

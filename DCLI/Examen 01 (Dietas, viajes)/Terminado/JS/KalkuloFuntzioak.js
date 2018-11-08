@@ -75,6 +75,7 @@ function limpiarTodo() {
     calcularTotal();
 }
 
+
 function cambiarTamanos(valor) {
     var emaitzaLabels = document.getElementsByClassName("emaitza");
     for (i = 0; i < emaitzaLabels.length; i++) {
