@@ -2,41 +2,53 @@
     display: grid;
     height: 100vh;
     grid-template-columns: 1fr;
-    grid-template-rows: 4fr 6fr;
-    background-color: brown;
+    grid-template-rows: 3fr 7fr;
 }
 
 .rectangulo {
     display: grid;
-    background-color: dodgerblue;
     grid-gap: 30px;
     grid-template-columns: 1fr 1fr;
+    background-color: #4696ff;
+    border-radius: 15px;
 }
 
 .izda {
+    margin: 20px;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, 1fr);
     padding: 10px;
     grid-gap: 10px;
-    background-color: chartreuse;
+    background-color: #949494;
+    border-radius: 15px;
 }
 
 .dcha {
-    background-color: darkslateblue;
+    margin: 20px;
     display: grid;
+    background-color: #949494;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-    margin: 4%;
-   text-align: center;
+    text-align: center;
+    border-radius: 15px;
 }
-.video{
+
+.video {
+    line-height: 300px;
+    margin: 4%;
     background-color: red;
 }
 
 .botonesMenu {
+    border-style:dashed;
     border-radius: 15px;
-    background-color: black;
+    line-height: 50px;
+    background-color: #c17847;
+    text-align: center;
+}
+.diff{
+    background-color: brown;
 }
 
 .cuadradoVerde {
