@@ -13,6 +13,11 @@
     border-radius: 15px;
 }
 
+p,
+.botonesMenu {
+    text-decoration: none;
+}
+
 .izda {
     margin: 20px;
     display: grid;
@@ -41,13 +46,14 @@
 }
 
 .botonesMenu {
-    border-style:dashed;
+    border-style: dashed;
     border-radius: 15px;
     line-height: 50px;
     background-color: #c17847;
     text-align: center;
 }
-.diff{
+
+.diff {
     background-color: brown;
 }
 
