@@ -3,29 +3,23 @@
 }
 
 header {
-    width: 90%;
+    width: 80%;
     margin: auto;
     background-color: lightblue;
-    border-radius: 25px;
+    text-align: center;
+    border-radius: 20px;
 }
-
-h1 {
-    margin-left: 30%;
-}
-
 
 .destino {
+    border-radius: 25px;
     top: 50px;
     left: 50px;
     position: absolute;
     margin-left: 200px;
-    border-radius: 25px;
     opacity: 0;
-    transition: all 2s linear;
+    transition: all 1s linear;
     transform: scale(0, 0);
-    border-radius: 25px;
 }
-
 
 .destino:target {
     opacity: 1;
@@ -42,8 +36,6 @@ h1 {
 .imagen {
     flex: 0 0 10%;
 }
-
-
 
 li {
     list-style: none;
