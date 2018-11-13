@@ -1,0 +1,17 @@
+.box {
+    background-color: brown;
+    padding: 10px;
+    color: aliceblue;
+    text-align: center;
+}
+
+.container {
+    height: 500px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px;
+    /* Centrar todas las cosas que hay en el container */
+    align-content: center;
+    background-color: #0183ec;
+}

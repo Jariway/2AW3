@@ -1,0 +1,42 @@
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 4fr 1fr;
+
+}
+.fondo{
+    background-color: rgb(235, 252, 138);
+}
+.destino {
+
+    position: absolute;
+    opacity: 0;
+    transition: all 0.5s linear;
+    transform: scale(0, 0);
+}
+
+header {
+    align-content: center;
+    text-align: center;
+}
+
+.destino:target {
+    opacity: 1;
+    transform: scale(1, 1);
+}
+
+li {
+    list-style: none;
+}
+
+.cuadro_images {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
+.galeria{
+    display: grid;
+    position: relative;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+}
