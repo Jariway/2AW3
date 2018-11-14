@@ -3,13 +3,13 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 4fr 1fr;
-
 }
-.fondo{
+
+.fondo {
     background-color: rgb(235, 252, 138);
 }
-.destino {
 
+.destino {
     position: absolute;
     opacity: 0;
     transition: all 0.5s linear;
@@ -34,9 +34,15 @@ li {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
 }
-.galeria{
+
+.gallery {
     display: grid;
     position: relative;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+.responsive {
+    width: 100%;
+    height: auto;
 }
