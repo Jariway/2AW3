@@ -1,0 +1,50 @@
+.imagenRoma{
+ width:200px;
+ height: 200px;
+}
+.imagenVenecia {
+ width:200px;
+ height: 200px;
+}
+.imagenCinque{
+ width:200px;
+ height: 200px;
+}
+.card {
+    display: inline-block;
+}
+.blocke{
+    display: block;
+    width: 70%;
+   
+}
+.discover{
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
+.container-fluid{
+background-image: url("../img/venice2.jpg");
+overflow: hidden;
+
+}
+.tituloCities{
+    text-align: center;
+    font-family: sanvito;
+}
+.lavanda{
+    background-color: #b1b1ff !important;
+}
+.tituloEspecialCards{
+    background-color: white;
+    font-family: sanvito;
+}
+.rosa{
+    background-color: #ffbcd1 !important;
+}
+.textoizda{
+    text-align: left;
+}
+p{
+    font
+}
