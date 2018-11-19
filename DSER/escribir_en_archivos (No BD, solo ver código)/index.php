@@ -22,7 +22,7 @@ if(filter_input(INPUT_COOKIE,'usuario')!=NULL){
     
     <form action="controller/controller_cookies.php" method="post">
         <p> Usuario: <input type="text" name="usuario"/></p>
-        <p>Contrasenia: <input type="password" name="contrasena" required /></p>
+        <p>Contraseña: <input type="password" name="contrasena" required /></p>
         <input type="submit" value="Login">
         <input type="checkbox" name="recordar"> Recuerdame
     </form>
