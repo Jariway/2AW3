@@ -8,4 +8,5 @@ include_once 'index.html.php';
 $idioma = getLanguage();
 session_start();
 $_SESSION['idioma'] = $idioma;
+
 ?>

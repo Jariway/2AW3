@@ -7,10 +7,13 @@
     <title>Document</title>
 </head>
 <body>
-    <p>El idioma: <?php
-    if($_SESSION['idioma'] == "es"){
-    echo ("Spanish");
-    }
-    ?></p>
+    <p>El idioma:
+    
+    <?php
+            if ($_SESSION['idioma'] == "es") {
+                echo ("Spanish");
+            }
+     ?>
+</p>
 </body>
 </html>
