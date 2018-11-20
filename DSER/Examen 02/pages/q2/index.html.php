@@ -20,9 +20,9 @@ and open the template in the editor.
         <select name="pais" id="pais    ">
 
             <?php
-                foreach($countriesView as $country){
+                foreach ($countriesView as $country) {
                     echo ("<option value='" . $country->getCode() . "'>" . $country->getName() . " </option>");
-                    }
+                }
             ?>
         </select>
         <br><br>

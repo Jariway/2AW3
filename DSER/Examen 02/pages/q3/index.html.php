@@ -17,9 +17,9 @@ and open the template in the editor.
         <select name="pais" id="pais    ">
 
             <?php
-                foreach($countriesView as $country){
+                foreach ($countriesView as $country) {
                     echo ("<option value='" . $country->getCode() . "'>" . $country->getName() . " </option>");
-                    }
+                }
             ?>
         </select>
         <input type="checkbox" name="checkmodify" id="modify">Modificar name or capital

@@ -7,16 +7,21 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>Look country info:</h2><br><br>
-    <p>For the saved cookie ->     <?php
-    echo ($_COOKIE["pais"]);
-    ?></p>
 
+    <h2>Look country info:</h2><br><br>
+
+    <p>For the saved cookie ->     
+        <?php
+            echo ($_COOKIE["pais"]);
+        ?>
+    </p>
     <br>
     <br>
-    <p><?php
-    echo($parameter ." ".$data);
-    ?></p>
+    <p>
+        <?php
+            echo ($parameter . " " . $data);
+        ?>
+</p>
 
 </body>
 </html>
