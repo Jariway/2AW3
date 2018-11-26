@@ -9,9 +9,11 @@ if (isset($_GET["pais"])) {
 }
 
 $modificar = false;
+
 if (isset($_GET["checkmodify"])) {
     $modificar = true;
 }
+
 if (isset($_GET["year"])) {
     if ($_GET["modificar"] == true) {
         $resultado = $countryOBJ->modificarCountry($_GET["code"], $_GET["name"], $_GET["continent"], $_GET["surface"], $_GET["year"], $_GET["pop"], $_GET["exp"], $_GET["cap"]);
