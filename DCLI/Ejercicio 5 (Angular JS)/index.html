@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="miApp" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/angular.min.js" type="text/javascript"></script>
+    <script src="js/script.js" type="text/javascript"> </script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div ng-controller="miControlador">
+        <h1>PORQUE ANGULAR</h1>
+        <br>
+        Introduce el nombre <input type="text" name="" ng-model="nombre" id="">
+        <br>
+        Introduce el apellido <input type="text" name="" ng-model="apellido" id="">
+        <br>
+        <button ng-click="SacarMensaje()">Saca mensaje</button>
+        <br>
+        <h2>El nombre introducido es: {{nombre}}</h2>
+        <br>
+        <h2>{{mensaje}}</h2>
+    </div>
+</body>
+
+</html>
