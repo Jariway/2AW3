@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="main">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Doble combo Angular</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
+    <script src="index.js"></script>
+</head>
+
+<body ng-controller="content">
+    <select name="categoria" ng-model="seleccionado" ng-change="cambio()">
+        <option ng-repeat="categoria in categorias" ng-value="categoria">
+            {{categoria.tipo}}
+        </option>
+    </select>
+ 
+    <br>
+    <select ng-show="seleccionado" ng-model="seleccionado2" ng-change="titulos()">
+        <option ng-repeat="linea in datos" ng-value="linea">
+            {{linea.titulo}}
+        </option>
+    </select> 
+   <h3 ng-show="seleccionado2">Titulo: {{seleccionado2.titulo}}</h3>
+   <h3 ng-show="seleccionado2">Autor: {{seleccionado2.autor}}</h3>
+   <h3 ng-show="seleccionado2">Tipo: {{seleccionado2.tipo}}</h3>
+</body>
+
+</html>

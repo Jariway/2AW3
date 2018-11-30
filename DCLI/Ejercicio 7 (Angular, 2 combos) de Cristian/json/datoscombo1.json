@@ -1,0 +1,26 @@
+[{
+        "id": 0,
+        "tipo": "comic",
+        "formato": "papel"
+    },
+    {
+        "id": 1,
+        "tipo": "libro",
+        "formato": "papel"
+    },
+    {
+        "id": 2,
+        "tipo": "revista",
+        "formato": "papel"
+    },
+    {
+        "id": 3,
+        "tipo": "cd",
+        "formato": "audiovisual"
+    },
+    {
+        "id": 4,
+        "tipo": "dvd",
+        "formato": "audiovisual"
+    }
+]
