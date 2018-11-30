@@ -18,10 +18,13 @@
 
         </select>
         <br>
-        <select ng-show="mostrarSegundoSelect==='true'" ng-change="mostrarSelect()" ng-model="resultPrimerSelect" ng-options="item as item.tipo for item in listaSecondCombobox"
+        <select ng-show="mostrarSegundoSelect==='true'" ng-change="setSecondSelectValue()" ng-model="resultSegundoSelect" ng-options="item as item.titulo for item in listaSecondCombobox"
             name="mainCombo" id="mainCombo">
-
         </select>
+        <br>
+        <br>
+        <h1>Autor: {{resultSegundoSelect.autor}}</h1>
+        <h1>Titulo: {{resultSegundoSelect.titulo}}</h1>
     </div>
 </body>
 
