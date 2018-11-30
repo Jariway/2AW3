@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="miApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/angular.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <div ng-controller="miControlador">
+        <h1>Combobox</h1><br>
+        <select ng-change="mostrarSelect()" ng-model="resultPrimerSelect" ng-options="item as item.tipo for item in listaMainCombobox"
+            name="mainCombo" id="mainCombo">
+
+        </select>
+        <br>
+        <select ng-show="mostrarSegundoSelect==='true'" ng-change="mostrarSelect()" ng-model="resultPrimerSelect" ng-options="item as item.tipo for item in listaSecondCombobox"
+            name="mainCombo" id="mainCombo">
+
+        </select>
+    </div>
+</body>
+
+</html>

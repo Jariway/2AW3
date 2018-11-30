@@ -1,6 +1,6 @@
 var miApp = angular.module("miApp", []);
-miApp.controller("miControlador",function($scope) {
-    $scope.nombre = "";
+miApp.controller('miControlador',function($scope) {
+    $scope.nombre = '';
     $scope.apellido = "";
     $scope.mensaje = "";
 
