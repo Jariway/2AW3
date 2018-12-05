@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 20px 50px;
+}
+
+.content {
+    background-color: #fbdfff;
+    display: grid;
+    grid-template-rows: 80px auto;
+    justify-items: center;
+    padding: 10px;
+    grid-gap: 25px;
+}
+
+h1 {
+    border-bottom: 2px solid #DF2935;
+    position: relative;
+    width: 90%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    color: #d26edf;
+}
+
+.caja {
+    display: grid;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 15px;
+
+}
+
+.menu>p {
+    padding: 10px 30px;
+}
+
+.menu>.opcion {
+    cursor: pointer;
+}
+
+.menu>.opcion:hover {
+    background-color: #403F4C;
+    color: #fbdfff;
+}
+
+.menu>.titulo {
+    background-color: #d26edf;
+}
+
+.contenido {
+    padding: 40px;
+    color: #d26edf;
+    border: 2px solid #403F4C;
+    width: 500px;
+}
+
+.contenido input {
+    padding: 5px;
+    background-color: #fbdfff;
+
+}
+
+.contenido>div {
+    display: none;
+    grid-gap: 10px;
+}
+
+input {
+    outline: none !important;
+    border: 2px solid #403F4C;
+}
+
+.botones {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+}
+
+input[type="button"] {
+    cursor: pointer;
+}
+
+input[type="button"]:hover {
+    background-color: #d26edf;
+    color: #fbdfff;
+}
+
+.contenido>div>label {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+}
+
+table,
+tr,
+th,
+rd {
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    text-align: center;
+    padding: 5px 10px;
+}
+
+td {
+    color: black;
+}
+
+.notificacion {
+    display: none;
+    background-color: #d26edf;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    position: absolute;
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid white;
+    font-size: 20px;
+    z-index: 5;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.17);
+}

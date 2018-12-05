@@ -1,7 +1,7 @@
 <?php
 class conexion {
     private $servidor = "localhost";
-    private $base = "dcli_angularjson_ikastetxea";
+    private $base = "eskola";
     private $usuario = "root";
     private $contraseña = "";
     private $pdo;
