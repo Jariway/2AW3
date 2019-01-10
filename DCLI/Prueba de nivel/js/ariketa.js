@@ -163,26 +163,26 @@ function validarTarjeta() {
 function numbersonly(myfield, e) {
     var key;
     var keychar;
-    if (window.event){
+    if (window.event) {
         key = window.event.keyCode;
-    }else if (e){
+    } else if (e) {
         key = e.which;
-    } else{
+    } else {
         return true;
     }
-        
+
     keychar = String.fromCharCode(key);
 
-    if ((key == null) || (key == 0) || (key == 8) || (key == 9) || (key == 13) || (key == 27)){
+    if ((key == null) || (key == 0) || (key == 8) || (key == 9) || (key == 13) || (key == 27)) {
         return true;
-    }else if ((("0123456789").indexOf(keychar) > -1)){
+    } else if ((("0123456789").indexOf(keychar) > -1)) {
         return true;
     } else if ((keychar == ".")) {
-        if (myfield.value.indexOf(keychar) > -1){
+        if (myfield.value.indexOf(keychar) > -1) {
             return false;
         }
-    } else{
+    } else {
         return false;
     }
-        
+
 }

@@ -81,7 +81,6 @@ function anadirNoticia() {
   document.getElementById("idNoticiaNuevaTexto").value = "";
 
   }
-
 }
 
 function numbersonly(myfield, e) {
