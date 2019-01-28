@@ -1,0 +1,28 @@
+
+body{background-color: #E0E0E0 ;color: #002c3c;}
+h1{width:65%;margin:auto;margin-bottom:20px;margin-top:70px;color: #003399;}
+h3{width:65%;margin:auto; }
+#zonaIKASLEAK,#zonaZIKLOAK{width:90%;margin:auto;padding:10px;margin-bottom:20px;   }
+#idtableart,#idtableusu,#idCompra{ border:3px solid white; margin-top: 2%;  }
+#zonaIKASLEAK table tr:first-child,#simularCompra table tr:first-child {
+    font-size: 16px;
+    color:white;
+    background-color: #003399;}
+ /* zona compras ++++++++++++*/
+#simularCompra { padding-left: 5%;padding-right:5%;}
+    .formCompras{        margin-top: 2%;  margin-left: 5px;     }
+
+    #spanusu{
+        color:#003399;
+        font-size: 16px;
+    }
+    #submitCompras{margin-left:50px; }
+/*nuevo+++++++++++++++++  */
+#myNavbar input{
+    width:175px;
+    margin-right: 5px;
+   
+    
+}
+ .txiki{width:25px;
+    height:25px;}
