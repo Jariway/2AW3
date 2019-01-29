@@ -1,0 +1,100 @@
+.imagenlogo {
+    width: 50px;
+    height: 50px;
+}
+
+#idDivLogin {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(3, 50px);
+    grid-template-areas: ". . . . . . . . u u ui ui"". . . . . . . . p p pi pi"". . . . . . . . be be bc bc";
+    display: none;
+
+}
+
+.usuario {
+    background-color: lightcyan;
+    grid-area: u;
+    margin-left: 100px;
+    border-top-left-radius: 15px;
+}
+
+input {
+    border: 1px solid #C00;
+
+}
+
+.usuarioinput {
+    background-color: lightcyan;
+    grid-area: ui;
+    margin-right: 20px;
+    border-top-right-radius: 15px;
+    padding-top: 15px;
+}
+.usuarioinput:focus {
+animation-name: cambiarInput;
+}
+
+.contrasenia {
+    background-color: lightcyan;
+    margin-left: 100px;
+    grid-area: p;
+}
+
+.contraseniainput {
+    background-color: lightcyan;
+    grid-area: pi;
+    margin-right: 20px;
+    padding-top: 15px;
+}
+
+.btnEnviar {
+    background-color: lightcyan;
+    margin-left: 100px;
+    grid-area: be;
+    border-bottom-left-radius: 15px;
+    padding-left: 15px;
+}
+button{
+    width: 70px;
+    height: 30px;
+}
+.btncancelar {
+    background-color: lightcyan;
+    margin-right: 20px;
+    grid-area: bc;
+    border-bottom-right-radius: 15px;
+}
+.logintext{
+    padding-top: 15px;
+    padding-left: 15px;
+}
+.oculto{
+    display: none;
+}
+#bibliotecaNav{
+    display: none;
+}
+.container{
+    display: none;
+}
+
+@keyframes cambiarInput {
+    0% {
+        width: 20%;
+    }
+
+    100% {
+        width: 30%;
+    }
+}
+
+@keyframes cambiarInputEstadoOriginal {
+    0% {
+        width: 30%;
+    }
+
+    100% {
+        width: 20%;
+    }
+}

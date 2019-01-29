@@ -1,0 +1,78 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+#idButtonBuscar {
+    color: #000040;
+    min-width: 80px;
+    min-height: 20px;
+}
+
+.menu label {
+    width: 100px;
+
+}
+
+.menu select {
+    width: 100px;
+    color: black;
+}
+
+/*  codigo zona libros*/
+
+.container {
+    background-color: #002c3c;
+    color: whitesmoke;
+    padding: 10px;
+    font-size: 1.5em;
+    /*display:none;*/
+}
+
+.libro {
+    background-color: white;
+    border-radius: 20px;
+    border: 2px solid gray;
+    margin-bottom: 5px;
+}
+
+#divLibros {
+    margin: 15px;
+}
+
+.caratula {
+    width: 150px;
+    height: 175px;
+    display: inline-block;
+    float: right;
+}
+
+.libro .datoslibro {
+    display: block;
+    float: left;
+    color: black;
+    font-size: 14;
+
+}
+
+#titulolibro {
+    font-size: 16px;
+    color: blue;
+}
+
+#novedadlibro {
+    margin: 5px;
+    width: 80px;
+    background-color: blue;
+    color: yellow;
+    border-radius: 10px;
+    font-size: 16px;
+
+}
