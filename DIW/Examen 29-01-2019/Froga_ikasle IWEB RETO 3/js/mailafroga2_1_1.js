@@ -1,7 +1,9 @@
 $(document).ready(function () {
     // event.preventDefault();  no ejecutar submit
+
+    // Lista de todos los libros (Sólo se carga una vez)
     var todosLibros;
-    // Regex pass
+
     var height = $(window).height();
     $('body').height(height);
     $('body').css("background-color", "grey");
@@ -79,7 +81,6 @@ $(document).ready(function () {
                 var nuevoLibro = "<div class='libro'> <div id='titulolibro'>" + item.titulo + "</div> <img class='caratula' src='" + item.foto + "' />    <p div class='datoslibro'>" + item.autor + "</p><br> <div id='novedadlibro'>NOVEDAD</div> <br> <div class='datoslibro'>" + item.tipo + "</div><br><p><a class='btn btn-default datoslibro' href='#' role='button'>View details &raquo;</a></p></div>";
                 $("#divLibros").append(nuevoLibro);
             }
-
         });
     }
 

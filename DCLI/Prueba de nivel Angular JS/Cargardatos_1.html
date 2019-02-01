@@ -1,169 +1,178 @@
-
 <!doctype html>
 <html ng-app="miAplicacion" lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Ejemplo  Angular</title>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular.min.js" type="text/javascript"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
-        <script src="js/bootstrap.min.js" type="text/javascript"></script>
-        <script src="js/Cargardatos_ANGULAR_1.js" type="text/javascript"></script>
-        <script src="js/npm.js" type="text/javascript"></script>
-        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-        <link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
-        <link href="css/cargardatos.css" rel="stylesheet" type="text/css"/>
-    </head>
-    <body ng-controller="mainController">
-        <div> 
-            <!-- *********************************   ZONA MENU   *********************************************** -->
-            <nav class="navbar navbar-inverse navbar-fixed-top">
-                <div class="container-fluid">
-                    <div class="navbar-header">
-                        <a class="navbar-brand" href="#">MAILA FROGA DCLI</a>
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button> 
+<head>
+    <meta charset="utf-8">
+    <title>Ejemplo Angular</title>
 
-                    </div>
-                    <div class="collapse navbar-collapse" id="myNavbar">
-                        <ul class="nav navbar-nav">  
-                            <li> <input type="button" class="btn  navbar-btn" ng-click="zonaIkasleak=1;showSimular=0"  value="ARTICULOS Y USUARIOS" /></li>
-                            <li> <input type="button" class="btn  navbar-btn" ng-click="zonaIkasleak=0;showSimular=1" value="SIMULAR COMPRA" /></li>
-                            <li id="idzonaAdmin"><input type="button" class="btn  navbar-btn" ng-show="showNavAdmin" ng-click="zonaIkasleak=0;showSimular=0;zonaAdmin=1" value="ADMINISTRAR"/></li>
-                        </ul>
-                    </div> 
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/Cargardatos_ANGULAR_1.js" type="text/javascript"></script>
+    <script src="js/npm.js" type="text/javascript"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/cargardatos.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body ng-controller="mainController">
+    <div>
+        <!-- *********************************   ZONA MENU   *********************************************** -->
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">MAILA FROGA DCLI</a>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
                 </div>
-            </nav>
-            <!--*****************  zona listados   *************-->
-            <div class="container">
-                <div  id="zonaIKASLEAK" ng-show="zonaIkasleak">
-                    <div class="row" >
-                        <div class="col-md-6 listado">
-                            <h1>CONSULTA DE ARTICULOS</h1> 
-                            <table id="idtableart" class="table table-striped table-bordered table-hover">
-                                <tr> 
-                                    <td class="peque">  Identificador </td>
-                                    <td class="medio">  Nombre </td>
-                                    <td class="medio">  Precio </td>
-                                    <td class="medio">  Stock Minimo </td>
-                                    <td class="grande">  Stock </td>     
-                                </tr>
-                                <tr ng-repeat="x in listaARTICULOS" >
-                                    <td class="peque">{{x.id}}</td>
-                                    <td class="medio">{{x.nombre}}</td>
-                                    <td class="medio"> {{x.Precio}}  </td>
-                                    <td class="medio"> {{x.StockMinimo}} </td>
-                                    <td class="grande">{{x.Stock}}</td>
-                                </tr>
-                            </table>
-
-                        </div>    
-                        <div class="col-md-6 listado">
-                            <h1>CONSULTA DE USUARIOS</h1> 
-                            <table id="idtableusu"  class="table table-striped table-bordered table-hover">
-                                <tr>
-                                    <td class="peque">  Identificador </td>
-                                    <td class="medio">  Nombre </td>
-                                    <td class="medio">  Tipo  </td>
-
-                                </tr>
-                                <tr ng-repeat="x in listaUSUARIOS">
-                                    <td class="peque">{{x.idUsuario}} </td>
-                                    <td class="medio">{{x.NombreUsuario}} </td>
-                                    <td class="medio">{{x.Tipo}} </td>
-
-                                </tr>
-                            </table>
-
-
-                        </div>  
-                    </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li> <input type="button" class="btn  navbar-btn" ng-click="zonaIkasleak=1;showSimular=0;zonaAdmin=0"
+                                value="ARTICULOS Y USUARIOS" /></li>
+                        <li> <input type="button" class="btn  navbar-btn" ng-click="zonaIkasleak=0;showSimular=1;zonaAdmin=0"
+                                value="SIMULAR COMPRA" /></li>
+                        <li id="idzonaAdmin"><input type="button" class="btn  navbar-btn" ng-show="showNavAdmin"
+                                ng-click="zonaIkasleak=0;showSimular=0;zonaAdmin=1" value="ADMINISTRAR" /></li>
+                    </ul>
                 </div>
-                <!--*****************  zona simulacion de compra   *************-->        
-                <div id="simularCompra" ng-show="showSimular">
-                    <h1>SIMULACIÓN DE COMPRAS</h1> 
-
-                    <form class="form-inline" id="formSimular">
-                        <div class="form-group formCompras">
-                            <label for="usuario">USUARIO:</label>
-                            <select ng-model="resultUserSelect" ng-change="mostrarNavSiAdmin()" ng-options="item.NombreUsuario for item in listaUSUARIOS" name="usuario">         
-                            </select>
-                            <span id="spanusu"> El usuario  es de tipo: {{SelectedOne.Tipo}} </span>
-                        </div>
-                        <div class="form-group formCompras">
-                            <label for="articulo">ARTICULO:</label>
-                            <select ng-model="selectedArticle" ng-change="mostrarArticuloEnTabla()" ng-options="item.nombre for item in listaARTICULOS" name="articulo">
-                            </select>
-                        </div>
-
-                        <table id="idCompra" class="table table-striped table-bordered table-hover">
+            </div>
+        </nav>
+        <!--*****************  zona listados   *************-->
+        <div class="container">
+            <div id="zonaIKASLEAK" ng-show="zonaIkasleak">
+                <div class="row">
+                    <div class="col-md-6 listado">
+                        <h1>CONSULTA DE ARTICULOS</h1>
+                        <table id="idtableart" class="table table-striped table-bordered table-hover">
                             <tr>
-                                <td>id</td>
-                                <td>Nombre</td>
-                                <td>Precio</td>
-                                <td>Stock</td>              
+                                <td class="peque"> Identificador </td>
+                                <td class="medio"> Nombre </td>
+                                <td class="medio"> Precio </td>
+                                <td class="medio"> Stock Minimo </td>
+                                <td class="grande"> Stock </td>
                             </tr>
-                            <tr>
-                                <td>{{idArticulo}} </td>
-                                <td>{{nombreArticulo}} </td>
-                                <td>{{precioArticulo}} </td>
-                                <td>{{stockArticulo}} </td>              
+                            <tr ng-repeat="x in listaARTICULOS">
+                                <td class="peque">{{x.id}}</td>
+                                <td class="medio">{{x.nombre}}</td>
+                                <td class="medio"> {{x.Precio}} </td>
+                                <td class="medio"> {{x.StockMinimo}} </td>
+                                <td class="grande">{{x.Stock}}</td>
                             </tr>
-
                         </table>
-                        <div class="form-group formCompras">
-                            <label id="cantidadCompra" for="inputcant"> CANTIDAD:</label> 
-                            <input id="inputcant" type="text" ng-model="cantidad" ng-change="calcularCantidad()" value="" />
-                            <input id="compraPosible" type="button" ng-click="compraPosible()" value="¿POSIBLE?"   />
-                        </div> 
-                        <div id="zonaImporte" ng-bind="total" class="form-group formCompras" >
-                            TOTAL IMPORTE: 
-                        </div>
 
-                        <div class="form-group formCompras">
+                    </div>
+                    <div class="col-md-6 listado">
+                        <h1>CONSULTA DE USUARIOS</h1>
+                        <table id="idtableusu" class="table table-striped table-bordered table-hover">
+                            <tr>
+                                <td class="peque"> Identificador </td>
+                                <td class="medio"> Nombre </td>
+                                <td class="medio"> Tipo </td>
 
-                            <button type="submit" id="submitCompras" class="btn btn-default ">Submit</button>
-                        </div>
-                    </form> 
+                            </tr>
+                            <tr ng-repeat="x in listaUSUARIOS">
+                                <td class="peque">{{x.idUsuario}} </td>
+                                <td class="medio">{{x.NombreUsuario}} </td>
+                                <td class="medio">{{x.Tipo}} </td>
 
-                </div>
+                            </tr>
+                        </table>
 
-                <!-- **********************zona administrador ***********     *********************************************** -->
-                <div  id="zonaADMIN" ng-show="zonaAdmin">
-                    <div >
-                        <div class="listado">
-                            <h1>CONSULTA DE ARTICULOS</h1> 
-                            <table id="idtableart" class="table table-striped table-bordered table-hover ">
-                                <tr> 
-                                    <td class="peque">  Identificador </td>
-                                    <td class="medio">  Nombre </td>
-                                    <td class="medio">  Precio </td>
-                                    <td class="medio">  Stock Minimo </td>
-                                    <td class="peque">  Stock </td>  
-                                    <td class="peque">  Borrar </td>  
-                                    <td class="peque">  Editar </td>  
-                                </tr>
-                                <tr ng-repeat="x in listaARTICULOS" >
-                                    <td class="peque"> {{x.id}} </td>
-                                    <td class="medio"> {{x.nombre}} </td>
-                                    <td class="medio">  <input ng-model="x.Precio" type="text" value="" ></td>
-                                    <td class="medio"> {{x.StockMinimo}}  </td>
-                                    <td class="grande"><input ng-model="x.Stock" type="text"  ></td>
-                                    <td class="grande"> <img src="img/images.jpg" ng-click="borrarArticulo(x.id,x.Stock)" class="txiki" style="cursor: pointer;" />   </td>
-                                    <td class="grande"><img src="img/modif.png" ng-click="editarArticulo(x.id)" class="txiki" style="cursor: pointer;" />   </td>
-                                </tr>
-                            </table>
-
-                        </div>    
 
                     </div>
                 </div>
+            </div>
+            <!--*****************  zona simulacion de compra   *************-->
+            <div id="simularCompra" ng-show="showSimular">
+                <h1>SIMULACIÓN DE COMPRAS</h1>
 
+                <form class="form-inline" id="formSimular">
+                    <div class="form-group formCompras">
+                        <label for="usuario">USUARIO:</label>
+                        <select ng-model="resultUserSelect" ng-change="mostrarNavSiAdmin()" ng-options="item.NombreUsuario for item in listaUSUARIOS"
+                            name="usuario">
+                        </select>
+                        <span id="spanusu"> El usuario es de tipo: {{resultUserSelect.Tipo}} </span>
+                    </div>
+                    <div class="form-group formCompras">
+                        <label for="articulo">ARTICULO:</label>
+                        <select ng-model="selectedArticle" ng-change="mostrarArticuloEnTabla()" ng-options="item.nombre for item in listaARTICULOS"
+                            name="articulo">
+                        </select>
+                    </div>
+
+                    <table id="idCompra" class="table table-striped table-bordered table-hover">
+                        <tr>
+                            <td>id</td>
+                            <td>Nombre</td>
+                            <td>Precio</td>
+                            <td>Stock</td>
+                        </tr>
+                        <tr>
+                            <td>{{idArticulo}} </td>
+                            <td>{{nombreArticulo}} </td>
+                            <td>{{precioArticulo}} </td>
+                            <td>{{stockArticulo}} </td>
+                        </tr>
+
+                    </table>
+                    <div class="form-group formCompras">
+                        <label id="cantidadCompra" for="inputcant"> CANTIDAD:</label>
+                        <input id="inputcant" type="text" ng-model="cantidad" ng-change="calcularCantidad()" value="" />
+                        <input id="compraPosible" type="button" ng-click="compraPosible()" value="¿POSIBLE?" />
+                    </div>
+                    <div id="zonaImporte" ng-bind="total" class="form-group formCompras">
+                        TOTAL IMPORTE:
+                    </div>
+
+                    <div class="form-group formCompras">
+
+                        <button type="submit" id="submitCompras" class="btn btn-default ">Submit</button>
+                    </div>
+                </form>
 
             </div>
+
+            <!-- **********************zona administrador ***********     *********************************************** -->
+            <div id="zonaADMIN" ng-show="zonaAdmin">
+                <div>
+                    <div class="listado">
+                        <h1>CONSULTA DE ARTICULOS</h1>
+                        <table id="idtableart" class="table table-striped table-bordered table-hover ">
+                            <tr>
+                                <td class="peque"> Identificador </td>
+                                <td class="medio"> Nombre </td>
+                                <td class="medio"> Precio </td>
+                                <td class="medio"> Stock Minimo </td>
+                                <td class="peque"> Stock </td>
+                                <td class="peque"> Borrar </td>
+                                <td class="peque"> Editar </td>
+                            </tr>
+                            <tr ng-repeat="x in listaARTICULOS">
+                                <td class="peque"> {{x.id}} </td>
+                                <td class="medio"> {{x.nombre}} </td>
+                                <td class="medio"> <input ng-model="x.Precio" type="text" value=""></td>
+                                <td class="medio"> {{x.StockMinimo}} </td>
+                                <td class="grande"><input ng-model="x.Stock" type="text"></td>
+                                <td class="grande"> <img src="img/images.jpg" ng-click="borrarArticulo(x.id,x.Stock)"
+                                        class="txiki" style="cursor: pointer;" /> </td>
+                                <td class="grande"><img src="img/modif.png" ng-click="editarArticulo(x.id)" class="txiki"
+                                        style="cursor: pointer;" /> </td>
+                            </tr>
+                        </table>
+
+                    </div>
+
+                </div>
+            </div>
+
+
         </div>
-    </body>
+    </div>
+</body>
+
 </html>

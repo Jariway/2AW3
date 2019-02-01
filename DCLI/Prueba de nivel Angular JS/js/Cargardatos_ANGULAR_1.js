@@ -2,8 +2,7 @@ var miAplicacion = angular.module('miAplicacion', []);
 
 miAplicacion.controller('mainController', ["$scope", "$http", function ($scope, $http) {
 
-    //////////////////////////////////////////////////////////////////////
-    //////////////////////////////////////////////////////////////////////
+    // Lista de artículos
     $scope.listaARTICULOS = [{
             "id": "0",
             "nombre": "Boli",
@@ -83,6 +82,7 @@ miAplicacion.controller('mainController', ["$scope", "$http", function ($scope, 
         }
     ];
 
+    // Lista de usuarios
     $scope.listaUSUARIOS = [{
             "idUsuario": '1',
             "NombreUsuario": 'Kepa',
@@ -99,23 +99,27 @@ miAplicacion.controller('mainController', ["$scope", "$http", function ($scope, 
             "Tipo": 'ADMIN'
         }
     ];
+    // Variable que se usa en el HTML
     $scope.x = [{
         "Stock": '',
         "Precio": ''
     }];
 
+    // Usuario que se selecciona en el input del HTML
     $scope.resultUserSelect = {
         idUsuario: "",
         NombreUsuario: "",
         Tipo: ""
     }
 
+    // Inicializar variables
     $scope.showSimular = 0;
     $scope.showNavAdmin = 0;
     $scope.zonaIkasleak = 1;
     $scope.zonaAdmin = 0;
 
     $scope.idArticulo = "";
+    $scope.rangoUsuario = "";
     $scope.nombreArticulo = "";
     $scope.precioArticulo = "";
     $scope.stockArticulo = "";
@@ -125,14 +129,16 @@ miAplicacion.controller('mainController', ["$scope", "$http", function ($scope, 
     $scope.cantidad = "";
     $scope.total = "";
 
+    // Mostrar el botón del panel de administración y el tipo de usuario
     $scope.mostrarNavSiAdmin = function () {
-        if ($scope.resultUserSelect.NombreUsuario == "Kepa") {
+        if ($scope.resultUserSelect.Tipo == "ADMIN") {
             $scope.showNavAdmin = 1;
         } else {
             $scope.showNavAdmin = 0;
         }
     };
 
+    // Mostrar el artículo seleccionado en el combo en la tabla
     $scope.mostrarArticuloEnTabla = function () {
         $scope.idArticulo = $scope.selectedArticle.id;
         $scope.nombreArticulo = $scope.selectedArticle.nombre;
@@ -140,12 +146,13 @@ miAplicacion.controller('mainController', ["$scope", "$http", function ($scope, 
         $scope.stockArticulo = $scope.selectedArticle.Stock;
     };
 
+    // Calcular la cantidad total dle artículo
     $scope.calcularCantidad = function () {
         $scope.total = $scope.cantidad * $scope.selectedArticle.Precio;
     };
 
+    // Comprobar si la compra es posible o no
     $scope.compraPosible = function () {
-
         if ($scope.cantidad.length == 0 || $scope.cantidad == 0) {
             alert("El input no puede estar vacío o ser 0");
         } else {
@@ -157,27 +164,24 @@ miAplicacion.controller('mainController', ["$scope", "$http", function ($scope, 
         }
     };
 
+    // Alert tras haber pulsado el botón del artículo 
     $scope.editarArticulo = function (pid) {
         alert("Se ha modificado el resgisto del artículo " + pid);
-
     };
 
-    $scope.borrarArticulo = function (pid,stock) {
-        if(stock == 0){
+    // Borrar un artículo
+    $scope.borrarArticulo = function (pid, stock) {
+        if (stock == 0) {
             angular.forEach($scope.listaARTICULOS, function (value, key) {
                 if (key == pid) {
                     $scope.listaARTICULOS.splice(pid, 1);
                 }
             });
             alert("Articulo borrado");
-        }else{
+        } else {
             alert("El stock no es 0, no se puede borrar");
         }
 
     };
 
 }]);
-
-/* $("#compraPosible").click(function() {
-  alert("Handler for .click() called.");
-}); */
