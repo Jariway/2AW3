@@ -31,12 +31,14 @@
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
-                        <li> <input type="button" class="btn  navbar-btn" ng-click="zonaIkasleak=1;showSimular=0;zonaAdmin=0"
+                        <li> <input type="button" class="btn  navbar-btn" ng-click="zonaIkasleak=1;showSimular=0;zonaAdmin=0;zonaCompras=0"
                                 value="ARTICULOS Y USUARIOS" /></li>
-                        <li> <input type="button" class="btn  navbar-btn" ng-click="zonaIkasleak=0;showSimular=1;zonaAdmin=0"
+                        <li> <input type="button" class="btn  navbar-btn" ng-click="zonaIkasleak=0;showSimular=1;zonaAdmin=0;zonaCompras=0"
                                 value="SIMULAR COMPRA" /></li>
                         <li id="idzonaAdmin"><input type="button" class="btn  navbar-btn" ng-show="showNavAdmin"
-                                ng-click="zonaIkasleak=0;showSimular=0;zonaAdmin=1" value="ADMINISTRAR" /></li>
+                                ng-click="zonaIkasleak=0;showSimular=0;zonaAdmin=1;zonaCompras=0" value="ADMINISTRAR" /></li>
+                        <li id="idZonaCompras"><input type="button" class="btn  navbar-btn" ng-click="zonaIkasleak=0;showSimular=0;zonaAdmin=0;zonaCompras=1"
+                                value="COMPRAS" /></li>
                     </ul>
                 </div>
             </div>
@@ -130,8 +132,7 @@
                     </div>
 
                     <div class="form-group formCompras">
-
-                        <button type="submit" id="submitCompras" class="btn btn-default ">Submit</button>
+                        <button type="submit" id="submitCompras" ng-click="realizarCompra()" class="btn btn-default ">Comprar</button>
                     </div>
                 </form>
 
@@ -169,8 +170,48 @@
 
                 </div>
             </div>
+            <!-- **********************zona compras ***********     *********************************************** -->
+            <div id="zonaCompras" ng-show="zonaCompras">
+                <div>
+                    <div class="listado">
+                        <h1>CONSULTA DE COMPRAS</h1>
+                        <form class="form-inline" id="formSimular">
+                            <div class="form-group formCompras">
+                                <label for="usuario">USUARIO:</label>
+                                <select ng-model="resultUserSelect" ng-change="mostrarNavSiAdmin()" ng-options="item.NombreUsuario for item in listaUSUARIOS"
+                                    name="usuario">
+                                </select>
+                            </div>
+                            <div class="form-group formCompras">
+                                <label for="articulo">ARTÍCULO:</label>
+                                <select ng-model="selectedArticle" ng-change="mostrarArticuloEnTabla()" ng-options="item.nombre for item in listaARTICULOS"
+                                    name="articulo">
+                                </select>
+                            </div>
 
+                            <table id="idCompra" class="table table-striped table-bordered table-hover">
+                                <tr>
+                                    <td>id</td>
+                                    <td>Nombre</td>
+                                    <td>Precio</td>
+                                    <td>Stock</td>
+                                </tr>
+                                <tr>
+                                    <td> </td>
+                                    <td> </td>
+                                    <td> </td>
+                                    <td> </td>
+                                </tr>
 
+                            </table>
+
+                            <div id="zonaImporte" ng-bind="total" class="form-group formCompras">
+                                TOTAL IMPORTE:
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>

@@ -105,18 +105,27 @@ miAplicacion.controller('mainController', ["$scope", "$http", function ($scope, 
         "Precio": ''
     }];
 
+    $scope.listaComprasRealizadas = [{
+        /*         idArticulo: "",
+                nombreArticulo: "",
+                precioTotal: "",
+                usuarioCompra: "",
+                cantidad: " "*/
+    }];
+
     // Usuario que se selecciona en el input del HTML
     $scope.resultUserSelect = {
         idUsuario: "",
-        NombreUsuario: "",
-        Tipo: ""
-    }
+        nombreUsuario: "",
+        tipo: ""
+    };
 
     // Inicializar variables
     $scope.showSimular = 0;
     $scope.showNavAdmin = 0;
     $scope.zonaIkasleak = 1;
     $scope.zonaAdmin = 0;
+    $scope.zonaCompras = 0;
 
     $scope.idArticulo = "";
     $scope.rangoUsuario = "";
@@ -159,7 +168,8 @@ miAplicacion.controller('mainController', ["$scope", "$http", function ($scope, 
             if ($scope.cantidad > $scope.selectedArticle.Stock) {
                 alert("La cantidad es introducida es superior al stock");
             } else {
-                alert("La compra es posible");
+                alert("La compra es posible. Comprando...");
+                realizarCompra();
             }
         }
     };
@@ -167,6 +177,19 @@ miAplicacion.controller('mainController', ["$scope", "$http", function ($scope, 
     // Alert tras haber pulsado el botón del artículo 
     $scope.editarArticulo = function (pid) {
         alert("Se ha modificado el resgisto del artículo " + pid);
+    };
+
+    // Realizar compra
+    $scope.realizarCompra = function () {
+
+        var objetoCompra = {
+            idArticulo: $scope.idArticulo,
+            nombreArticulo: $scope.nombreArticulo,
+            precioTotal: $scope.total,
+            usuarioCompra: resultUserSelect.NombreUsuario,
+            cantidad: $scope.cantidad
+        };
+        $scope.listaComprasRealizadas.push(objetoCompra);
     };
 
     // Borrar un artículo
@@ -181,7 +204,5 @@ miAplicacion.controller('mainController', ["$scope", "$http", function ($scope, 
         } else {
             alert("El stock no es 0, no se puede borrar");
         }
-
     };
-
 }]);
