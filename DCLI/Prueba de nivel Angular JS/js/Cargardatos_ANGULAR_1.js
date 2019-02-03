@@ -105,13 +105,8 @@ miAplicacion.controller('mainController', ["$scope", "$http", function ($scope, 
         "Precio": ''
     }];
 
-    $scope.listaComprasRealizadas = [{
-        /*         idArticulo: "",
-                nombreArticulo: "",
-                precioTotal: "",
-                usuarioCompra: "",
-                cantidad: " "*/
-    }];
+    $scope.listaComprasRealizadas = [{}];
+    $scope.listaComprasFiltro = [{}];
 
     // Usuario que se selecciona en el input del HTML
     $scope.resultUserSelect = {
@@ -134,6 +129,8 @@ miAplicacion.controller('mainController', ["$scope", "$http", function ($scope, 
     $scope.stockArticulo = "";
     $scope.editarStock = "";
     $scope.editarPrecio = "";
+    $scope.filtroArticulo = "";
+    $scope.filtroUsuario = "";
 
     $scope.cantidad = "";
     $scope.total = "";
@@ -168,8 +165,8 @@ miAplicacion.controller('mainController', ["$scope", "$http", function ($scope, 
             if ($scope.cantidad > $scope.selectedArticle.Stock) {
                 alert("La cantidad es introducida es superior al stock");
             } else {
-                alert("La compra es posible. Comprando...");
-                realizarCompra();
+                alert("La compra es posible. Artículo(s) comprado.");
+                $scope.realizarCompra();
             }
         }
     };
@@ -181,14 +178,17 @@ miAplicacion.controller('mainController', ["$scope", "$http", function ($scope, 
 
     // Realizar compra
     $scope.realizarCompra = function () {
+        // Crea un objeto
+        var objetoCompra = {};
+        // Mete los datos de la compra en el objeto
+        objetoCompra.idArticulo = $scope.idArticulo;
+        objetoCompra.nombreArticulo = $scope.nombreArticulo;
+        objetoCompra.precioTotal = $scope.total;
+        objetoCompra.usuarioCompra = $scope.resultUserSelect.NombreUsuario;
+        objetoCompra.cantidad = $scope.cantidad;
+        objetoCompra.precioIndividual = $scope.precioArticulo;
 
-        var objetoCompra = {
-            idArticulo: $scope.idArticulo,
-            nombreArticulo: $scope.nombreArticulo,
-            precioTotal: $scope.total,
-            usuarioCompra: resultUserSelect.NombreUsuario,
-            cantidad: $scope.cantidad
-        };
+        // Añade el objeto al array
         $scope.listaComprasRealizadas.push(objetoCompra);
     };
 
@@ -205,4 +205,13 @@ miAplicacion.controller('mainController', ["$scope", "$http", function ($scope, 
             alert("El stock no es 0, no se puede borrar");
         }
     };
+
+    // Recorrer compras con filtros
+       $scope.filtrarCompras = function () {
+           var pUsuario = $scope.filtroUsuario;
+           var pArticulo = $scope.filtroArticulo
+            angular.forEach($scope.listaComprasRealizadas, function (value, key) {
+               console.log(value.nombreArticulo);
+            });
+       };
 }]);

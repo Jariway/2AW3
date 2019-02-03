@@ -26,3 +26,7 @@ h3{width:65%;margin:auto; }
 }
  .txiki{width:25px;
     height:25px;}
+
+    .formCompras{
+            vertical-align: initial !important;
+    }
