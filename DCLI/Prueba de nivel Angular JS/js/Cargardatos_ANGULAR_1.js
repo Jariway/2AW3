@@ -214,16 +214,24 @@ miAplicacion.controller('mainController', ["$scope", "$http", function ($scope, 
         var pUsuario = $scope.filtroUsuario.NombreUsuario;
         var pArticulo = $scope.filtroArticulo.nombre;
         angular.forEach($scope.listaComprasRealizadas, function (value, key) {
-            if (pUsuario != undefined) {
-                if (pUsuario == value.usuarioCompra) {
+            if (pUsuario != undefined && pArticulo != undefined) {
+                if (pUsuario == value.usuarioCompra && pArticulo == value.nombreArticulo) {
                     $scope.listaComprasFiltro.push(value);
                 }
-            }
-            if (pArticulo != undefined) {
-                if (pArticulo == value.nombreArticulo) {
-                    $scope.listaComprasFiltro.push(value);
+            } else {
+                if (pUsuario != undefined) {
+                    if (pUsuario == value.usuarioCompra) {
+                        $scope.listaComprasFiltro.push(value);
+                    }
+                }
+                if (pArticulo != undefined) {
+                    if (pArticulo == value.nombreArticulo) {
+                        $scope.listaComprasFiltro.push(value);
+                    }
                 }
             }
+
+
         });
     };
 }]);
