@@ -190,6 +190,7 @@ miAplicacion.controller('mainController', ["$scope", "$http", function ($scope, 
 
         // Añade el objeto al array
         $scope.listaComprasRealizadas.push(objetoCompra);
+        $scope.listaComprasFiltro.push(objetoCompra);
     };
 
     // Borrar un artículo
@@ -207,11 +208,22 @@ miAplicacion.controller('mainController', ["$scope", "$http", function ($scope, 
     };
 
     // Recorrer compras con filtros
-       $scope.filtrarCompras = function () {
-           var pUsuario = $scope.filtroUsuario;
-           var pArticulo = $scope.filtroArticulo
-            angular.forEach($scope.listaComprasRealizadas, function (value, key) {
-               console.log(value.nombreArticulo);
-            });
-       };
+    $scope.filtrarCompras = function () {
+        alert("Filtrando compras para usuario: " + $scope.filtroUsuario.NombreUsuario);
+        $scope.listaComprasFiltro = [{}];
+        var pUsuario = $scope.filtroUsuario.NombreUsuario;
+        var pArticulo = $scope.filtroArticulo.nombre;
+        angular.forEach($scope.listaComprasRealizadas, function (value, key) {
+            if (pUsuario != undefined) {
+                if (pUsuario == value.usuarioCompra) {
+                    $scope.listaComprasFiltro.push(value);
+                }
+            }
+            if (pArticulo != undefined) {
+                if (pArticulo == value.nombreArticulo) {
+                    $scope.listaComprasFiltro.push(value);
+                }
+            }
+        });
+    };
 }]);
