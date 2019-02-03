@@ -223,11 +223,12 @@ miAplicacion.controller('mainController', ["$scope", "$http", function ($scope, 
                     if (pUsuario == value.usuarioCompra) {
                         $scope.listaComprasFiltro.push(value);
                     }
-                }
-                if (pArticulo != undefined) {
+                } else if (pArticulo != undefined) {
                     if (pArticulo == value.nombreArticulo) {
                         $scope.listaComprasFiltro.push(value);
                     }
+                } else {
+                    $scope.listaComprasFiltro.push(value);
                 }
             }
 
