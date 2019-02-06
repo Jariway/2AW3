@@ -177,19 +177,21 @@
                         <form class="form-inline" id="formSimular">
                             <div class="form-group formCompras">
                                 <label for="usuario">USUARIO:</label>
-                                <select ng-model="filtroUsuario"  ng-options="item.NombreUsuario for item in listaUSUARIOS"
+                                <select ng-model="filtroUsuario" ng-options="item.NombreUsuario for item in listaUSUARIOS"
                                     name="usuario">
+                                    <option value=""></option>
                                 </select>
                             </div>
                             <div class="form-group formCompras">
                                 <label for="articulo">ARTÍCULO:</label>
                                 <select ng-model="filtroArticulo" ng-options="item.nombre for item in listaARTICULOS"
                                     name="articulo">
+                                    <option value=""></option>
                                 </select>
                             </div>
-                            <div class="form-group formCompras">
+                            <!--                             <div class="form-group formCompras">
                                 <button ng-click="filtrarCompras()">COMPRAR</button>
-                            </div>
+                            </div> -->
 
                             <table id="idCompra" class="table table-striped table-bordered table-hover">
                                 <tr>
@@ -200,7 +202,7 @@
                                     <td>Precio Indiv.</td>
                                     <td>Precio Total</td>
                                 </tr>
-                                <tr ng-repeat="i in listaComprasFiltro">
+                                <tr ng-repeat="i in listaComprasFiltro | filter: { nombreArticulo:filtroArticulo.nombre, usuarioCompra:filtroUsuario.NombreUsuario }">
                                     <td class="peque"> {{i.idArticulo}} </td>
                                     <td class="medio"> {{i.nombreArticulo}} </td>
                                     <td class="medio"> {{i.usuarioCompra}} </td>
