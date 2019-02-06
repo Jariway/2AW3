@@ -1,11 +1,12 @@
-.container>div {
+.container>.add,
+.edit,
+.delete,
+.consultas {
       display: flex;
       justify-content: center;
       align-items: center;
       font-size: 2em;
       color: #ffeead;
-
-
 }
 
 html,
@@ -56,14 +57,22 @@ body {
 
 .container>.divConsultas {
       background-color: rgb(197, 127, 255);
-
       grid-column: 1/-1;
 }
 
 .container>.botones {
       background-color: rgb(255, 236, 127);
-
-
       grid-column: 1/-1;
+}
+
+.divAdd {
+      display: grid;
+      grid-template: 400px / 1fr 1fr 1fr 1fr;
+                  align-items: center;
+                  justify-items: center;
+}
+.inputs{
+      grid-column: 2/3;
+
 
 }
