@@ -42,6 +42,7 @@
             </div>
         </div>
         <div ng-show="showEdit" class="divEdit">
+            Debes cambiar todos los datos de forma obligatoria.
             <div class="textos">
                 <p>Select Nombre</p>
                 <p>Nombre</p>
@@ -75,14 +76,33 @@
         </div>
         <div ng-show="showDelete" class="divDelete">
             <div class="inputs">
-<select ng-model="selectAlumnos" name="selectAlumnos" id="">
-    <option value=""></option>
-    <option ng-repeat="x in alumnos" ng-value="x">{{x.Nombre}}</option>
-</select>
-<button ng-click="eliminarAlumno()">Borrar</button>
+                <select ng-model="selectAlumnos" name="selectAlumnos" id="">
+                    <option value=""></option>
+                    <option ng-repeat="x in alumnos" ng-value="x">{{x.Nombre}}</option>
+                </select>
+                <button ng-click="eliminarAlumno()">Borrar</button>
             </div>
         </div>
-        <div ng-show="showConsultas" class="divConsultas"></div>
+        <div ng-show="showConsultas" class="divConsultas">
+            <div class="tabla">
+                <table border="1">
+                    <tbody>
+                        <tr>
+                            <td>Id</td>
+                            <td>Nombre</td>
+                            <td>Curso</td>
+                            <td>Edad</td>
+                        </tr>
+                        <tr ng-repeat="x in alumnos">
+                            <td class="peque">{{x.id}}</td>
+                            <td class="medio">{{x.Nombre}}</td>
+                            <td class="medio"> {{x.Curso}} </td>
+                            <td class="medio"> {{x.Edad}} </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
 </body>
 

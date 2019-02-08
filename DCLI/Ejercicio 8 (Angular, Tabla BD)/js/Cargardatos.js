@@ -57,10 +57,14 @@ miAplicacion.controller('mainController', ["$scope", "$http", function ($scope, 
                 data: "nombre=" + $scope.editNombre + "&edad=" + $scope.selectAlumnos.Edad + "&curso=" + $scope.curso + "&id=" + $scope.selectAlumnos.id,
             })
             .then(function () {
-                console.log($scope.editNombre);
-                console.log($scope.selectAlumnos.Edad);
-                console.log($scope.curso);
-                console.log($scope.selectAlumnos.id);
+                var objetoUsuario = {};
+                objetoUsuario.Nombre = $scope.editNombre;
+                objetoUsuario.Edad = $scope.selectAlumnos.Edad;
+                objetoUsuario.Curso = $scope.curso;
+                objetoUsuario.id = $scope.selectAlumnos.id;
+
+                $scope.borrarAlumnoDelScope($scope.selectAlumnos.id);
+                $scope.alumnos.push(objetoUsuario);
                 alert("Alumno editado correctamente.");
             }, function (error) {
                 console.log("Error al editar alunmno");
