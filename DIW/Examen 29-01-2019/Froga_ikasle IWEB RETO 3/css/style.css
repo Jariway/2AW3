@@ -3,16 +3,40 @@
     height: 50px;
 }
 
-.idDivLogin{
+.idDivLogin {
+    padding-right: 25px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 150px;
 }
-
-.botonesLogin{
+.idDivLogin{
+    display: none;
+}
+.botonesLogin {
     padding: 5px 10px 5px 10px;
 }
-.login{
+
+.inputsLogin {
+    width: 50%;
+}
+
+.usuario:valid {
+    width: 70%;
+    border: 1px solid rgb(17, 204, 0);
+    animation-name: inputCorrecto;
+    animation-duration: 2s;
+}
+#bibliotecaNav{
+    display: none;
+}
+.usuario:invalid {
+    width: 50%;
+    border: 1px solid #C00;
+     animation-name: cambiarInput;
+    animation-duration: 2s; 
+}
+
+.login {
     background-color: lightcyan;
     grid-column: 4/-1;
     border-radius: 15px;
@@ -22,4 +46,28 @@
     align-content: center;
     text-align: center;
     align-items: center;
+}
+
+@keyframes cambiarInput {
+    0% {
+        border: 1px solid rgb(17, 204, 0);
+        width: 70%;
+    }
+
+    100% {
+        border: 1px solid #C00;
+        width: 50%;
+    }
+}
+
+@keyframes inputCorrecto {
+    0% {
+        border: 1px solid #C00;
+        width: 50%;
+    }
+
+    100% {
+        border: 1px solid rgb(17, 204, 0);
+        width: 70%;
+    }
 }
