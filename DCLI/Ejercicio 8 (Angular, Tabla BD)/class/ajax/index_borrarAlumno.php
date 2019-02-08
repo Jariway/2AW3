@@ -1,5 +1,5 @@
 <?php
-    include_once "../clases/conexion.php";
+    include_once "../conexion.php";
     $conexion = new conexion();
 
     $id = $_POST["id"];

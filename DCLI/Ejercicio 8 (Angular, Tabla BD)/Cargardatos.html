@@ -79,7 +79,7 @@
     <option value=""></option>
     <option ng-repeat="x in alumnos" ng-value="x">{{x.Nombre}}</option>
 </select>
-                <button>Borrar</button>
+<button ng-click="eliminarAlumno()">Borrar</button>
             </div>
         </div>
         <div ng-show="showConsultas" class="divConsultas"></div>

@@ -66,6 +66,28 @@ miAplicacion.controller('mainController', ["$scope", "$http", function ($scope, 
                 console.log("Error al editar alunmno");
             });
     };
+    // Eliminar alumno
+    $scope.eliminarAlumno = function () {
+        console.log("Eliminando alumno");
+        $http({
+                url: "class/ajax/index_borrarAlumno.php",
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                data: "id=" + $scope.selectAlumnos.id,
+            })
+            .then(function () {
+                console.log($scope.editNombre);
+                console.log($scope.selectAlumnos.Edad);
+                console.log($scope.curso);
+                console.log($scope.selectAlumnos.id);
+                $scope.borrarAlumnoDelScope($scope.selectAlumnos.id);
+                alert("Alumno borrado correctamente.");
+            }, function (error) {
+                console.log("Error al borrar alunmno");
+            });
+    };
 
     // Muestra u oculta las cosas
     $scope.mostrarMenu = function (mostrar) {
@@ -89,12 +111,11 @@ miAplicacion.controller('mainController', ["$scope", "$http", function ($scope, 
     $scope.borrarAlumnoDelScope = function (pid) {
 
         angular.forEach($scope.alumnos, function (value, key) {
-            if (key == pid) {
-                $scope.alumnos.splice(pid, 1);
+            if (value.id == pid) {
+                $scope.alumnos.splice(key, 1);
+                /*  alert("Alumno borrado del scope"); */
             }
         });
-        alert("Alumno borrado");
-
     };
 
     $http({
