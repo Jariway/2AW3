@@ -43,6 +43,7 @@
         </div>
         <div ng-show="showEdit" class="divEdit">
             <div class="textos">
+                <p>Select Nombre</p>
                 <p>Nombre</p>
                 <p>Edad</p>
                 <p>Clase</p>
@@ -54,8 +55,11 @@
                 </select>
                 <br>
                 <br>
+                <input type="text" name="" ng-model="editNombre" ng-value="selectAlumnos.Nombre" id="">
+                <br>
+                <br>
 
-                <input type="text" name="edad" ng-value="selectAlumnos.Edad">
+                <input type="text" name="edad" ng-model="selectAlumnos.Edad">
                 <br>
                 <br>
                 <select name="selectModulo" ng-model="curso" id="">
@@ -66,10 +70,18 @@
                     <option value="5">DSER</option>
                     <option value="6">INGLES</option>
                 </select>
-                <button ng-click="insertarAlumno()">Editar</button>
+                <button ng-click="editarAlumno()">Editar</button>
             </div>
         </div>
-        <div ng-show="showDelete" class="divDelete"></div>
+        <div ng-show="showDelete" class="divDelete">
+            <div class="inputs">
+<select ng-model="selectAlumnos" name="selectAlumnos" id="">
+    <option value=""></option>
+    <option ng-repeat="x in alumnos" ng-value="x">{{x.Nombre}}</option>
+</select>
+                <button>Borrar</button>
+            </div>
+        </div>
         <div ng-show="showConsultas" class="divConsultas"></div>
     </div>
 </body>

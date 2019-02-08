@@ -17,6 +17,10 @@ miAplicacion.controller('mainController', ["$scope", "$http", function ($scope, 
     $scope.alumnos = "";
     $scope.selectAlumnos = "";
 
+    // Modificar alumno
+    $scope.editNombre = "";
+    $scope.editCurso = $scope.curso;
+
     // Funciones
     // Insertar alumno
     $scope.insertarAlumno = function () {
@@ -30,9 +34,36 @@ miAplicacion.controller('mainController', ["$scope", "$http", function ($scope, 
                 data: "nombre=" + $scope.usuario + "&edad=" + $scope.edad + "&curso=" + $scope.curso,
             })
             .then(function () {
+                var objetoUsuario = {};
+                objetoUsuario.Nombre = $scope.usuario;
+                objetoUsuario.Edad = $scope.edad;
+                objetoUsuario.Curso = $scope.curso;
+                $scope.alumnos.push(objetoUsuario);
                 alert("Alumno insertado correctamente.");
             }, function (error) {
                 console.log("error al insertar alunmno");
+            });
+    };
+
+    // Editar alumno
+    $scope.editarAlumno = function () {
+        console.log("Editando alumno");
+        $http({
+                url: "class/ajax/index_modificarAlumno.php",
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                data: "nombre=" + $scope.editNombre + "&edad=" + $scope.selectAlumnos.Edad + "&curso=" + $scope.curso + "&id=" + $scope.selectAlumnos.id,
+            })
+            .then(function () {
+                console.log($scope.editNombre);
+                console.log($scope.selectAlumnos.Edad);
+                console.log($scope.curso);
+                console.log($scope.selectAlumnos.id);
+                alert("Alumno editado correctamente.");
+            }, function (error) {
+                console.log("Error al editar alunmno");
             });
     };
 
@@ -45,6 +76,7 @@ miAplicacion.controller('mainController', ["$scope", "$http", function ($scope, 
         if (mostrar == 'showAdd') {
             $scope.showAdd = 1;
         } else if (mostrar == 'showEdit') {
+            $scope.edad = "";
             $scope.showEdit = 1;
         } else if (mostrar == 'showDelete') {
             $scope.showDelete = 1;
@@ -53,7 +85,18 @@ miAplicacion.controller('mainController', ["$scope", "$http", function ($scope, 
         }
     };
 
-    console.log("Insertando alumno");
+    // Borrar un alumno
+    $scope.borrarAlumnoDelScope = function (pid) {
+
+        angular.forEach($scope.alumnos, function (value, key) {
+            if (key == pid) {
+                $scope.alumnos.splice(pid, 1);
+            }
+        });
+        alert("Alumno borrado");
+
+    };
+
     $http({
             url: "class/ajax/index_listarAlumnos.php",
             method: "GET"

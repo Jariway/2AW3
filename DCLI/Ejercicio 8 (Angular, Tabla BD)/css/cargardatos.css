@@ -74,6 +74,15 @@ body {
       align-items: center;
       justify-items: center;
 }
+.divDelete {
+      display: grid;
+      grid-template: 400px / 1fr 1fr 1fr 1fr;
+      align-items: center;
+      justify-items: center;
+}
+.divDelete>.inputs{
+      grid-column: 3/4;
+}
 
 .textos {
       grid-column: 2/3;

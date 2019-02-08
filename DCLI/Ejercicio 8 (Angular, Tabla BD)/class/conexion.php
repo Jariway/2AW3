@@ -1,9 +1,9 @@
 <?php
     class conexion {
-        private $servidor = "localhost";
+        private $servidor = "192.168.0.166";
         private $base = "eskola";
-        private $usuario = "root";
-        private $contraseña = "";
+        private $usuario = "clase";
+        private $contraseña = "root1";
         private $pdo; 
 
         public function __construct() {
