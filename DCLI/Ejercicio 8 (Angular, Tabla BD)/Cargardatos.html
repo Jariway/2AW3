@@ -13,11 +13,11 @@
 
 <body ng-controller="mainController">
     <div class="container">
-<div class="add" ng-click="mostrarMenu('showAdd')">Añadir</div>
-<div ng-click="mostrarMenu('showEdit')" class="edit">Editar</div>
-<div ng-click="mostrarMenu('showDelete')" class="delete">Borrar</div>
-<div ng-click="mostrarMenu('showConsultas')" class="consultas">Consultas</div>
-        <div  ng-show="showAdd" class="divAdd">
+        <div class="add" ng-click="mostrarMenu('showAdd')">Añadir</div>
+        <div ng-click="mostrarMenu('showEdit')" class="edit">Editar</div>
+        <div ng-click="mostrarMenu('showDelete')" class="delete">Borrar</div>
+        <div ng-click="mostrarMenu('showConsultas')" class="consultas">Consultas</div>
+        <div ng-show="showAdd" class="divAdd">
             <div class="textos">
                 <p>Nombre</p>
                 <p>Edad</p>
@@ -48,10 +48,14 @@
                 <p>Clase</p>
             </div>
             <div class="inputs">
-                <input type="text" ng-model="usuario" name="" id="">
+                <select ng-model="selectAlumnos" name="selectAlumnos" id="">
+                    <option value=""></option>
+                    <option ng-repeat="x in alumnos" ng-value="x">{{x.Nombre}}</option>
+                </select>
                 <br>
                 <br>
-                <input type="number" name="" ng-model="edad" id="">
+
+                <input type="text" name="edad" ng-value="selectAlumnos.Edad">
                 <br>
                 <br>
                 <select name="selectModulo" ng-model="curso" id="">
@@ -62,7 +66,7 @@
                     <option value="5">DSER</option>
                     <option value="6">INGLES</option>
                 </select>
-                <button ng-click="insertarAlumno()">Añadir</button>
+                <button ng-click="insertarAlumno()">Editar</button>
             </div>
         </div>
         <div ng-show="showDelete" class="divDelete"></div>

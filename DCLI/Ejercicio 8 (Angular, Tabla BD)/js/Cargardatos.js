@@ -6,6 +6,7 @@ miAplicacion.controller('mainController', ["$scope", "$http", function ($scope, 
     $scope.showEdit = 0;
     $scope.showDelete = 0;
     $scope.showConsultas = 0;
+    $scope.showEditarAlumno = 0;
 
     // Añadir alumno
     $scope.usuario = "";
@@ -14,7 +15,7 @@ miAplicacion.controller('mainController', ["$scope", "$http", function ($scope, 
 
     // Lista alumnos
     $scope.alumnos = "";
-
+    $scope.selectAlumnos = "";
 
     // Funciones
     // Insertar alumno
