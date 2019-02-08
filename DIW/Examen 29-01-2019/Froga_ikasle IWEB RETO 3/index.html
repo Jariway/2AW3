@@ -12,12 +12,11 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
-    <script src="js/mailafroga2_1_1.js" type="text/javascript"></script>
+    <script src="js/script_optimizado.js" type="text/javascript"></script>
 </head>
+
 <body>
-    <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxx   header xxxxxxxxxxxxxxxx -->
     <header>
-        <!--**********************aqui va el menu superior bootstrap **********-->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="#"><img class="imagenlogo" src="images/Logo_bibliotecas_publicas.jpg" alt=""></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
@@ -39,25 +38,28 @@
             </span>
         </nav>
     </header>
-    <div id="idDivLogin">
-        <div class="usuario">
-            <p class="loginText"><b>USUARIO</b></p>
-        </div>
-        <div class="usuarioinput"><input required id="userLogin" type="text" name="" placeholder="usuario"></div>
-        <div class="contrasenia">
-            <p class="loginText"><b>PASAHITZA</b></p>
-        </div>
-        <div class="contraseniainput"><input required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" type="password"
-                name="" id="passLogin"></div>
-        <div class="btnEnviar botones"><button id="submitUser">Enviar</button></div>
-        <div class="btncancelar botones"><button id="cancelar">cencelar</button></div>
+    <div class="idDivLogin" id="idDivLogin">
+        <div class="login">
+            <div class="colTextos">
+                <b>USUARIO</b>
+                <br>
+                <br>
+                <b>CONTRASEÑA</b>
+                <br>
+                <br>
+                <button class="botonesLogin">ENVIAR</button>
+            </div>
+            <div class="inputs">
+                <input type="text" name="usuario" id="usuario">
+                <br>
+                <br>
+                <input type="password" name="pass" id="pass">
+                <br>
+                <br>
+                <button class="botonesLogin">CANCELAR</button>
 
-        <!--********************aqui va el login************** -->
-        <!--La contradenia hará cumplir estas reglas:
-                                Al menos una letra mayúscula 
-                                Al menos una letra minúscula 
-                                Al menos un dígito, 
-                                Mínimo ocho en longitud -->
+            </div>
+        </div>
     </div>
     <div class="container">
         <div class="divBuscar">
