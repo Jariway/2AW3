@@ -39,6 +39,10 @@ $(document).ready(function () {
 
     // Botón de buscar con filtros
     $("#idButtonBuscar").click(function () {
+        filtrarLibros();
+    });
+
+    function filtrarLibros() {
         $(".libro").remove();
         var selectTipoLibro = getTypeSelectValue(); // String
         var selectAutorLibro = getAutorSelectValue(); // String
@@ -49,6 +53,7 @@ $(document).ready(function () {
         var checkboxNovedadSuperado = false;
 
         $.each(todosLosLibros, function (i, item) {
+
             if (selectAutorLibro != "TODOS") {
                 selectAutorSuperado = filtroAutor(item, selectAutorLibro);
             } else {
@@ -66,13 +71,16 @@ $(document).ready(function () {
                 checkboxNovedadSuperado = true;
             }
             if (checkboxNovedadSuperado && selectAutorSuperado && selectTipoSuperado) {
-                var nuevoLibro = "<div class='libro'> <div id='titulolibro'>" + item.titulo + "</div> <img class='caratula' src='" + item.foto + "' />    <p div class='datoslibro'>" + item.autor + "</p><br> <div id='novedadlibro'>" + item.novedad + "</div> <br> <div class='datoslibro'>" + item.tipo + "</div><br><p><a class='btn btn-default datoslibro' href='#' role='button'>View details &raquo;</a></p></div>";
+                var esNovedad = "";
+                if (item.novedad) {
+                    esNovedad = "NOVEDAD"
+                }
+                var nuevoLibro = "<div class='libro'> <div id='titulolibro'>" + item.titulo + "</div> <img class='caratula' src='" + item.foto + "' />    <p div class='datoslibro'>" + item.autor + "</p><br> <div id='novedadlibro'>" + esNovedad + "</div> <br> <div class='datoslibro'>" + item.tipo + "</div><br><p><a class='btn btn-default datoslibro' href='#' role='button'>View details &raquo;</a></p></div>";
                 $("#divLibros").append(nuevoLibro);
             }
 
         });
-    });
-
+    }
     // FUNCIONES
     function filtroAutor(item, selectAutorLibro) {
         if (item.autor == selectAutorLibro) {
@@ -104,6 +112,10 @@ $(document).ready(function () {
             url: "json/datosJSON.json",
             success: function (result) {
                 todosLosLibros = result;
+                $(".libro").remove();
+                $(".autoresSelect").remove();
+                $("#divLibros").css("display", "flex");
+                $(".container").css("display", "grid");
                 RecorrerJson();
             },
             error: function (error) {
@@ -121,7 +133,7 @@ $(document).ready(function () {
         $.each(todosLosLibros, function (i, item) {
             var esNovedad = "";
             addAutor(item.autor);
-            if (item.novedad == "True") {
+            if (item.novedad == true) {
                 esNovedad = "NOVEDAD";
             }
             var nuevoLibro = "<div class='libro'> <div id='titulolibro'>" + item.titulo + "</div> <img class='caratula' src='" + item.foto + "' />    <p div class='datoslibro'>" + item.autor + "</p><br> <div id='novedadlibro'>" + esNovedad + "</div> <br> <div class='datoslibro'>" + item.tipo + "</div><br><p><a class='btn btn-default datoslibro' href='#' role='button'>View details &raquo;</a></p></div>";
