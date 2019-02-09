@@ -3,7 +3,7 @@
         "titulo": "La ladrona de libros",
         "autor": "Markus Zusak",
         "tipo": "ficcion",
-        "novedad": "False",
+        "novedad": false,
         "foto": "images/La_ladrona_de_libros.jpg"
     },
     {
@@ -11,7 +11,7 @@
         "titulo": "La leyenda del ladron",
         "autor": "Juan Gomez Jurado",
         "tipo": "ficcion",
-        "novedad": "False",
+        "novedad": false,
         "foto": "images/La_leyenda_del_ladron.jpg"
     },
     {
@@ -19,7 +19,7 @@
         "titulo": "La viajera del tiempo",
         "autor": "Lorena Franco",
         "tipo": "ficcion",
-        "novedad": "True",
+        "novedad": true,
         "foto": "images/La_viajera_del_tiempo.jpg"
     },
     {
@@ -27,7 +27,7 @@
         "titulo": "Fuimos canciones",
         "autor": "Elisabet Benavent",
         "tipo": "Noficcion",
-        "novedad": "False",
+        "novedad": false,
         "foto": "images/Fuimos_canciones.jpg"
     },
     {
@@ -35,7 +35,7 @@
         "titulo": "Sapiens",
         "autor": "Yuval Noah Jarari",
         "tipo": "Noficcion",
-        "novedad": "True",
+        "novedad": true,
         "foto": "images/Sapiens.jpg"
     },
     {
@@ -43,7 +43,7 @@
         "titulo": "El caso Fitzgerald",
         "autor": "John Grisham",
         "tipo": "ficcion",
-        "novedad": "False",
+        "novedad": false,
         "foto": "images/El_caso_fitzgerald.jpg"
     },
     {
@@ -51,7 +51,7 @@
         "titulo": "El arte de la guerra",
         "autor": "Sun Tzu",
         "tipo": "Noficcion",
-        "novedad": "True",
+        "novedad": true,
         "foto": "images/El_arte_de_la_guerra.jpg"
     },
     {
@@ -59,7 +59,7 @@
         "titulo": "Una Columna de fuego",
         "autor": "Ken Follet",
         "tipo": "ficcion",
-        "novedad": "True",
+        "novedad": true,
         "foto": "images/Una_columna_de_fuego.jpg"
     }
 ]
