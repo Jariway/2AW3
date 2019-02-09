@@ -1,8 +1,65 @@
-[{ "id":"1", "titulo":"La ladrona de libros","autor":"Markus Zusak ", "tipo":"ficcion", "novedad":"False", "foto":"images/La_ladrona_de_libros.jpg" },
-{ "id":"2", "titulo":"La leyenda del ladron","autor":"Juan Gomez Jurado", "tipo":"ficcion", "novedad":"False", "foto":"images/La_leyenda_del_ladron.jpg" }, 
-{ "id":"3", "titulo":"La viajera del tiempo","autor":"Lorena Franco", "tipo":"ficcion", "novedad":"True", "foto":"images/La_viajera_del_tiempo.jpg" }, 
-{ "id":"4", "titulo":"Fuimos canciones","autor":"Elisabet Benavent", "tipo":"Noficcion", "novedad":"False", "foto":"images/Fuimos_canciones.jpg" }, 
-{ "id":"5", "titulo":"Sapiens", "autor":"Yuval Noah Jarari", "tipo":"Noficcion", "novedad":"True", "foto":"images/Sapiens.jpg" },
-{ "id":"6", "titulo":"El caso Fitzgerald", "autor":"John Grisham", "tipo":"ficcion", "novedad":"False", "foto":"images/El_caso_fitzgerald.jpg" },
-{ "id":"7", "titulo":"El arte de la guerra", "autor":"Sun Tzu", "tipo":"Noficcion", "novedad":"True", "foto":"images/El_arte_de_la_guerra.jpg" },
-{ "id":"8", "titulo":"Una Columna de fuego","autor":"Ken Follet", "tipo":"ficcion", "novedad":"True", "foto":"images/Una_columna_de_fuego.jpg" }]
+[{
+        "id": "1",
+        "titulo": "La ladrona de libros",
+        "autor": "Markus Zusak",
+        "tipo": "ficcion",
+        "novedad": "False",
+        "foto": "images/La_ladrona_de_libros.jpg"
+    },
+    {
+        "id": "2",
+        "titulo": "La leyenda del ladron",
+        "autor": "Juan Gomez Jurado",
+        "tipo": "ficcion",
+        "novedad": "False",
+        "foto": "images/La_leyenda_del_ladron.jpg"
+    },
+    {
+        "id": "3",
+        "titulo": "La viajera del tiempo",
+        "autor": "Lorena Franco",
+        "tipo": "ficcion",
+        "novedad": "True",
+        "foto": "images/La_viajera_del_tiempo.jpg"
+    },
+    {
+        "id": "4",
+        "titulo": "Fuimos canciones",
+        "autor": "Elisabet Benavent",
+        "tipo": "Noficcion",
+        "novedad": "False",
+        "foto": "images/Fuimos_canciones.jpg"
+    },
+    {
+        "id": "5",
+        "titulo": "Sapiens",
+        "autor": "Yuval Noah Jarari",
+        "tipo": "Noficcion",
+        "novedad": "True",
+        "foto": "images/Sapiens.jpg"
+    },
+    {
+        "id": "6",
+        "titulo": "El caso Fitzgerald",
+        "autor": "John Grisham",
+        "tipo": "ficcion",
+        "novedad": "False",
+        "foto": "images/El_caso_fitzgerald.jpg"
+    },
+    {
+        "id": "7",
+        "titulo": "El arte de la guerra",
+        "autor": "Sun Tzu",
+        "tipo": "Noficcion",
+        "novedad": "True",
+        "foto": "images/El_arte_de_la_guerra.jpg"
+    },
+    {
+        "id": "8",
+        "titulo": "Una Columna de fuego",
+        "autor": "Ken Follet",
+        "tipo": "ficcion",
+        "novedad": "True",
+        "foto": "images/Una_columna_de_fuego.jpg"
+    }
+]

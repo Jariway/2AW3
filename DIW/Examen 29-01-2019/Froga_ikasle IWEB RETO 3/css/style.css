@@ -9,9 +9,11 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 150px;
 }
-.idDivLogin{
+
+.idDivLogin {
     display: none;
 }
+
 .botonesLogin {
     padding: 5px 10px 5px 10px;
 }
@@ -20,20 +22,33 @@
     width: 50%;
 }
 
+.container {
+    display: none;
+}
+
+#divLibros {
+    /* display: none; */
+/*     display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 300px; */
+}
+
 .usuario:valid {
     width: 70%;
     border: 1px solid rgb(17, 204, 0);
     animation-name: inputCorrecto;
     animation-duration: 2s;
 }
-#bibliotecaNav{
+
+#bibliotecaNav {
     display: none;
 }
+
 .usuario:invalid {
     width: 50%;
     border: 1px solid #C00;
-     animation-name: cambiarInput;
-    animation-duration: 2s; 
+    animation-name: cambiarInput;
+    animation-duration: 2s;
 }
 
 .login {
