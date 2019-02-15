@@ -1,0 +1,29 @@
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.bichos {
+    border: 1px solid rgb(255, 91, 91);
+    grid-column: 5/9;
+    grid-row: 2/3;
+    height: 300px;
+    width: 400px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+img {
+    width: 90px;
+    height: 90px;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.c {
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
