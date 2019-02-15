@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="titulo">IMÁGENES</h1>
+        <div class="imgMinis">
+            <div class="imgMini imgMini1"><img class="imgpx" src="images/bicho.jpg" alt=""></div>
+            <div class="imgMini imgMini2"><img class="imgpx" src="images/bicho2.jpg" alt=""></div>
+            <div class="imgMini imgMini3"><img class="imgpx" src="images/bicho3.jpg" alt=""></div>
+            <div class="imgMini imgMini4"><img class="imgpx" src="images/hormiga.jpg" alt=""></div>
+            <div class="imgMini imgMini5"><img class="imgpx" src="images/mosca.jpg" alt=""></div>
+            <div class="imgMini imgMini6"><img class="imgpx" src="images/nuevo.jpg" alt=""></div>
+            <div class="imgMini imgMini7"><img class="imgpx" src="images/triste.jpg" alt=""></div>
+            <div class="imgMini imgMini8"><img class="imgpx" src="images/sonriente.jpg" alt=""></div>
+            <div class="imgMini imgMini9"><img class="imgpx" src="images/mosquito.jpg" alt=""></div>
+            <div class="imgMini imgMini10"><img class="imgpx" src="images/images3.jpg" alt=""></div>
+            <div class="imgMini imgMini11"><img class="imgpx" src="images/images4.jpg" alt=""></div>
+            <div class="imgMini imgMini12"><img class="imgpx" src="images/images5.jpg" alt=""></div>
+        </div>
+        <div class="puntuacion">
+            <div num="1" class="punt p1">0</div>
+            <div num="2" class="punt p2">0</div>
+            <div num="3" class="punt p3">0</div>
+            <div num="4" class="punt p4">0</div>
+            <div num="5" class="punt p5">0</div>
+            <div num="6" class="punt p6">0</div>
+            <div num="7" class="punt p7">0</div>
+            <div num="8" class="punt p8">0</div>
+            <div num="9" class="punt p9">0</div>
+            <div num="10" class="punt p10">0</div>
+            <div num="11" class="punt p11">0</div>
+            <div num="12" class="punt p12">0</div>
+        </div>
+        <div class="bichos">
+            <div id="1" class="c1 c"><img id="i1" src="images/bicho.jpg" alt=""></div>
+            <div id="2" class="c2 c"><img id="i2" src="images/bicho2.jpg" alt=""></div>
+            <div id="3" class="c3 c"><img id="i3" src="images/bicho3.jpg" alt=""></div>
+            <div id="4" class="c4 c"><img id="i4" src="images/hormiga.jpg" alt=""></div>
+            <div id="5" class="c5 c"><img id="i5" src="images/mosca.jpg" alt=""></div>
+            <div id="6" class="c6 c"><img id="i6" src="images/nuevo.jpg" alt=""></div>
+            <div id="7" class="c7 c"><img id="i7" src="images/triste.jpg" alt=""></div>
+            <div id="8" class="c8 c"><img id="i8" src="images/sonriente.jpg" alt=""></div>
+            <div id="9" class="c9 c"><img id="i9" src="images/mosquito.jpg" alt=""></div>
+            <div id="10" class="c10 c"><img id="i10" src="images/images3.jpg" alt=""></div>
+            <div id="11" class="c11 c"><img id="i11" src="images/images4.jpg" alt=""></div>
+            <div id="12" class="c12 c"><img id="i12" src="images/images5.jpg" alt=""></div>
+        </div>
+        <div class="menu">
+            <br>
+            <br>
+            <button id="puntuar">Puntuar</button>
+            <button id="btnEstilos">Estilos</button>
+            <button id="mejor">Mejor</button>
+            <br>
+            <br>
+            <div class="estilos">
+                <label for="tamanio">Tamaño</label>
+                <input type="number" name="tamanio" id="tamanio">
+                <br>
+                <br>
+                <label for="color">Color</label>
+                <input type="color" name="color" id="color">
+                <br>
+                <br>
+                <label for="color">Aplicar a: </label>
+                <select name="aplicara" id="aplicara">
+                    <option value="">TITULO</option>
+                    <option value="">IMAGENES</option>
+                </select>
+                <button>ACEPTAR</button>
+            </div>
+            <div class="mostrarMejor">
+                <img id="mejorImagen" src="" alt="">
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

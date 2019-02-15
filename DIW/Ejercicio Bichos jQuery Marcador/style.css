@@ -1,0 +1,70 @@
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.bichos {
+    grid-column: 5/9;
+    grid-row: 2/3;
+    height: 300px;
+    width: 400px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    display: none;
+}
+
+.menu {
+    grid-column: 5/9;
+    grid-row: 3/4;
+}
+#mejorImagen{
+    display: none;
+}
+.estilos {
+    display: none;
+}
+
+.titulo {
+    padding-top: 20%;
+    grid-column: 5/9;
+    grid-row: 1/2;
+    text-align: center;
+}
+
+img {
+    width: 90px;
+    height: 90px;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.imgpx {
+    width: 50px;
+    height: 50px;
+}
+
+.punt {
+    border: 2px solid rgb(0, 0, 0);
+    width: 50px;
+    height: 50px;
+    margin-bottom: 4px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.imgMinis {
+    grid-row: 1/-1;
+    grid-column: 1/2;
+}
+
+.puntuacion {
+    grid-row: 1/-1;
+}
+
+.c {
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
