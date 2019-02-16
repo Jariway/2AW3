@@ -17,11 +17,21 @@
     text-align: center;
     grid-column: 3/5;
 }
-
+.linkak{
+   grid-column: 6/7;
+   text-align: end;
+}
+.links{
+       cursor: pointer;
+}
 table {
  text-align: center;
     grid-column: 2/6;
 }
 img{
     width: 20%;
+}
+.pelikulaonena{
+    display: none;
+grid-column: 2/6;
 }
