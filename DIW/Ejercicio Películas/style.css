@@ -1,0 +1,27 @@
+.logoimg {
+    width: 15%;
+}
+
+.container {
+    height: 93vh;
+    background-color: rgb(255, 175, 175) !important;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr 3fr;
+}
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    grid-column: 3/5;
+}
+
+table {
+ text-align: center;
+    grid-column: 2/6;
+}
+img{
+    width: 20%;
+}

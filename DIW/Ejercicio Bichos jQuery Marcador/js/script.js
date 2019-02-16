@@ -10,7 +10,7 @@ $(document).ready(function () {
     });
     $("#cambiarEstilos").click(function () {
         var valorSelect = getValorSelect();
-        var varlorTamanio = parseInt( $("#tamanio").val());
+        var varlorTamanio = parseInt($("#tamanio").val());
         var varlorColor = $("#color").val();
         changeStyles(valorSelect, varlorTamanio, varlorColor);
     });
@@ -25,9 +25,9 @@ $(document).ready(function () {
     // Funciones
     function changeStyles(valorSelect, varlorTamanio, varlorColor) {
         if (valorSelect == "TITULO") {
-            $(".titulo").css("color",varlorColor);
+            $(".titulo").css("color", varlorColor);
             $(".titulo").css("font-size", varlorTamanio);
-        }else{
+        } else {
             $("img").css("border", "2px solid" + varlorColor);
             $("img").css("padding", varlorTamanio);
         }

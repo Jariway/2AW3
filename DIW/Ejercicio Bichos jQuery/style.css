@@ -14,11 +14,12 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
 }
-.titulo{
+
+.titulo {
     padding-top: 20%;
-        grid-column: 5/9;
-            grid-row: 1/2;
-            text-align: center;
+    grid-column: 5/9;
+    grid-row: 1/2;
+    text-align: center;
 }
 
 img {
