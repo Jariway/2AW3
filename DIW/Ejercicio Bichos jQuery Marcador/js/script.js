@@ -40,7 +40,7 @@ $(document).ready(function () {
     // Obtiene la imagen con el número más alto
     function getHighest() {
         var highestNumber = 0;
-        var highest = 1;
+        var highest = 100;
         $(".punt").each(function (index) {
             var currentValue = parseInt($(this).text());
             var currentId = parseInt($(this).attr("num"));
